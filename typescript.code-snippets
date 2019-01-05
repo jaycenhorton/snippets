@@ -1,0 +1,37 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  "Print to console": {
+    "scope": "typescript",
+    "prefix": "tsclass",
+    "body": [
+      "import * as nconf from 'nconf';",
+      "import log from './log';",
+      "import ${2:ClassTypeName} from './${2}';\n",
+
+      "const instance = () => new ${TM_FILENAME_BASE}();\n",
+
+      "class ${TM_FILENAME_BASE/[^0-9^a-z]//gi} {",
+      "\tpublic ${1:classInstanceName}: ${2};\n",
+
+      "\tconstructor() {",
+      "\t\tthis.${1} = new ${2}();",
+      "\t}\n",
+
+      "\tstatic get${1/(.)/${1:/upcase}/}() {",
+      "\t\treturn instance().get${1/(.)/${1:/upcase}/}();",
+      "\t}\n",
+
+      "\tasync get${1/(.)/${1:/upcase}/}() {\n",
+
+      "\t}",
+      "}\n",
+      "export default ${TM_FILENAME_BASE/[^0-9^a-z]//gi};"
+    ],
+    "description": "Create boilerplate typescript class file"
+  }
+}
