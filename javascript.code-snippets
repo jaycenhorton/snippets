@@ -1,0 +1,8 @@
+{
+  "React Function Component With MUI": {
+    "scope": "javascript",
+    "prefix": "rfcm",
+    "body": "import React from 'react';\nimport {} from '@material-ui/core';\n\nconst ${1:${TM_FILENAME_BASE}} = props => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n};\nexport default ${1:${TM_FILENAME_BASE}};",
+    "description": "React function component w/ MUI imports"
+  }
+}
