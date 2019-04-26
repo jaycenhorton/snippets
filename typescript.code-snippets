@@ -43,5 +43,11 @@
       "}"
     ],
     "description": "Typescript class datastore entity getter"
+  },
+  "Bunyan request log statement": {
+    "scope": "typescript",
+    "prefix": "rlog",
+    "body": ["req.log.${1:trace}('${2:message}');"],
+    "description": "Create a log on the request object"
   }
 }
