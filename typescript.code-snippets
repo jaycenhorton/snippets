@@ -61,5 +61,10 @@
     "prefix": "nr",
     "body": ["null, req"],
     "description": "use null + request object as function args"
+  },
+  "Anonymous arrow function (no parameters": {
+    "prefix": "afn",
+    "body": ["() => {${1}}"],
+    "description": "create an anonymous arrow function that takes no parameters"
   }
 }
